@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Register
+    link(rel='stylesheet', href='/stylesheets/nav.css') 
+    link(rel='stylesheet', href='/stylesheets/login.css') 
+  body
+    header
+      nav
+        ul.navbar
+          li: a(href='/') Home
+          li: a(href='/login') Log In
+          li: a(href='/centers') Centers
+    h1 Register
+    form(action='/register', method='POST') 
+      div
+        label(for='username') Username:
+        input(type='text', name='username', required)
+      div
+        label(for='email') Email:
+        input(type='email', name='email', required)
+      div
+        label(for='password') Password:
+        input(type='password', name='password', required)
+      div
+        button(type='submit') Register
+    p
+      | Already have an account? 
+      a(href='/login') Log in here 

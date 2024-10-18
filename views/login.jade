@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title Login
+    link(rel='stylesheet', href='/stylesheets/nav.css') 
+    link(rel='stylesheet', href='/stylesheets/login.css') 
+  body
+    header
+      nav
+        ul.navbar
+          li: a(href='/') Home
+          li: a(href='/login') Log In
+          li: a(href='/centers') Centers
+          li: a(href='/reviews') Reviews
+    h1 Log In
+    form(action='/login', method='POST') 
+      div
+        br
+        label(for='username') Username:
+        br
+        input(type='text', name='username', required)
+      div
+        label(for='password') Password:
+        br
+        input(type='password', name='password', required)
+      div
+        button(type='submit') Log In
+    p
+      | Don't have an account? 
+      a(href='/register') Create one here 
